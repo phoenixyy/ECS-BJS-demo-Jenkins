@@ -1,3 +1,2 @@
-# ECS-BJS-demo-Jenkins
-
-This is a demo project for ECS and Jenkins in BJS 
+# Amazon ECS PHP Simple Demo App
+Directions on how to launch this sample app on Amazon ECS can be found in the documentation: [Docker basics](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html).
