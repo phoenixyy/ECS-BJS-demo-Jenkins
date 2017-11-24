@@ -2,7 +2,7 @@
     "containerDefinitions": [
         {
             "name": "ecs-demo-cicd-php",
-            "image": "795915595685.dkr.ecr.cn-north-1.amazonaws.com.cn/ecs-demo-cicd-php:latest",
+            "image": "%REPOSITORY_URI%:%BUILD_NUMBER%",
             "memory": "128",
             "essential": true,
             "portMappings": [
