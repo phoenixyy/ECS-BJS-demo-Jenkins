@@ -1,74 +1,51 @@
 {
-  "requiresAttributes": [
-    {
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.ecr-auth",
-      "targetId": null,
-      "targetType": null
-    },
-    {
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs",
-      "targetId": null,
-      "targetType": null
-    },
-    {
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19",
-      "targetId": null,
-      "targetType": null
-    }
-  ],
-  "taskDefinitionArn": "arn:aws-cn:ecs:cn-north-1:795915595685:task-definition/ecs-demo-cicd-php-TD:2",
-  "networkMode": "bridge",
-  "status": "ACTIVE",
-  "revision": 2,
-  "taskRoleArn": null,
-  "containerDefinitions": [
-    {
-      "volumesFrom": [],
-      "memory": 128,
-      "extraHosts": null,
-      "linuxParameters": null,
-      "dnsServers": null,
-      "disableNetworking": null,
-      "dnsSearchDomains": null,
-      "portMappings": [
+    "networkMode": "bridge",
+    "taskRoleArn": null,
+    "containerDefinitions": [
         {
-          "hostPort": 0,
-          "containerPort": 80,
-          "protocol": "tcp"
+            "volumesFrom": [],
+            "memory": 128,
+            "extraHosts": null,
+            "linuxParameters": null,
+            "dnsServers": null,
+            "disableNetworking": null,
+            "dnsSearchDomains": null,
+            "portMappings": [
+                {
+                    "hostPort": 0,
+                    "containerPort": 80,
+                    "protocol": "tcp"
+                }
+            ],
+            "hostname": null,
+            "essential": true,
+            "entryPoint": null,
+            "mountPoints": [],
+            "name": "ecs-demo-cicd-php",
+            "ulimits": null,
+            "dockerSecurityOptions": null,
+            "environment": [],
+            "links": null,
+            "workingDirectory": null,
+            "readonlyRootFilesystem": null,
+            "image": "%REPOSITORY_URI%:%BUILD_NUMBER%",
+            "command": null,
+            "user": null,
+            "dockerLabels": null,
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "ecs-demo-log",
+                    "awslogs-region": "cn-north-1",
+                    "awslogs-stream-prefix": "ecs-demo-cicd-php"
+                }
+            },
+            "cpu": 0,
+            "privileged": null,
+            "memoryReservation": null
         }
-      ],
-      "hostname": null,
-      "essential": true,
-      "entryPoint": null,
-      "mountPoints": [],
-      "name": "ecs-demo-cicd-php",
-      "ulimits": null,
-      "dockerSecurityOptions": null,
-      "environment": [],
-      "links": null,
-      "workingDirectory": null,
-      "readonlyRootFilesystem": null,
-      "image": "%REPOSITORY_URI%:%BUILD_NUMBER%",
-      "command": null,
-      "user": null,
-      "dockerLabels": null,
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "options": {
-          "awslogs-group": "ecs-demo-log",
-          "awslogs-region": "cn-north-1",
-          "awslogs-stream-prefix": "ecs-demo-cicd-php"
-        }
-      },
-      "cpu": 0,
-      "privileged": null,
-      "memoryReservation": null
-    }
-  ],
-  "placementConstraints": [],
-  "volumes": [],
-  "family": "ecs-demo-cicd-php-TD"
+    ],
+    "volumes": [],
+    "family": "ecs-demo-cicd-php-TD",
+    "placementConstraints": []
 }
