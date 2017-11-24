@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM 795915595685.dkr.ecr.cn-north-1.amazonaws.com.cn/ecs-demo-cicd-php:latest
 
 # Install dependencies
 RUN apt-get update -y
